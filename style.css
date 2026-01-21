@@ -1,0 +1,438 @@
+html{
+    /* 62.5% of 16px = 10px */
+    font-size: 62.5%;/*only this font-size can change the math of rem not another property can change that even when you set values for them in the html...*/
+}
+
+body{
+    overflow-x:hidden;
+    margin: 0;
+}
+
+.webPage{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
+}
+
+*{
+    margin:0;
+    padding: 0;
+    font-family: "DM Serif Display",serif;
+    /* outline: 1px solid black; */
+    /* box-sizing: border-box; ADD THIS LINE which tells the browser to do not allot the external space for the border and padding consider it in the provided width only */
+}
+
+/*========================================
+NAVBAR STYLE
+========================================*/
+
+.nav-header{
+    height: 6.5rem;
+    width: 100%;
+    min-width: 36.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid black;
+}
+
+.nav-components{
+    display: flex;
+}
+
+.hamburger{
+    display: none;
+}
+
+.nav-links{
+    display: flex;
+    gap: 2rem;
+    margin-right: 4rem;
+}
+
+.nav-links a{
+    text-decoration: none;
+    color: black;
+    font-size: 2.2rem;
+}
+
+.nav-links A:hover{
+    text-decoration:underline 2px;
+    color: black;
+}
+
+.frontendPractice a{
+    text-decoration: none;
+    color: black;
+    font-size: 3.2rem;
+    line-height: 2rem;
+    margin: 2rem;
+}
+
+.frontendPractice a:hover{
+    text-decoration:underline 3px;
+    color:black;
+}
+
+/*=================================
+Hidden Bar
+=================================*/
+
+.hidden-bar{
+    background-color:azure;
+    border: 2px solid black;
+    width: 22rem;
+    height: 100vh;
+    position: absolute;
+    transform: translateX(80rem); 
+    transition: 0.2s;
+    right: 0;
+    top: 0;
+    display: none;
+}
+
+.hidden-bar.active{
+    transform: translateX(2.3rem);
+    display: initial;
+}
+
+.hidden-bar-content{
+    margin-top: 6.1rem;
+    width: 90%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+.hidden-bar-content a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 2.5rem;
+    line-height: 5rem;
+    margin-left: 1rem;
+}
+
+/*=================================
+HERO Section 
+=================================*/
+
+ .hero-content{
+    background-color:#FAEBD7;
+    min-height: auto;
+    aspect-ratio: 2/1;
+    display: flex;
+    padding: 5rem;
+    border-bottom: 2px solid black;
+  }
+
+  .college-container img{
+    margin-bottom:10% ;
+  } 
+
+  .college-container{
+    max-height: 70%;
+    max-width: 50%;
+    display: flex;
+    justify-content: center;
+    aspect-ratio: 3/2;
+    margin: 7% 2% 5% 5%;
+  }
+
+  .hero-subContent p{
+    font-size: 2rem;
+  }
+
+  .hero-subContent h1{
+    font-size: 5rem;
+    font-weight: bolder;
+  }
+
+  .hero-subContent{
+    width: 50%;
+    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    padding: 10rem 0rem 10rem 10rem;
+  }
+
+  .hero-links-container a{
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: black;
+    border: 2px solid black;
+    padding: 1rem;
+    margin-right: 1rem;
+    background-color: white;
+  }
+
+  .hero-links-container a:hover{
+    background-color: black;
+    color: white;
+  }
+
+  .hero-links-container{
+    width: 100%;
+    display: flex;
+  }
+
+/*=================================
+  Learn more content
+  =================================*/
+
+  .learn-more{
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    padding: 3.5em;
+  }
+
+  .learn-more h1{
+    width: 70%;
+    height: auto;
+    margin: auto;
+    font-size: 4rem;
+    font-weight: bold;
+    font-family: "DM Serif Display",serif;
+    text-align: center;
+  }
+
+  .learn-more>p{
+    font-size: 2.6rem;
+    text-align: center;
+    width: 45%;
+  }
+
+  .inner-learn-more{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    gap: 3rem;
+}
+
+.inner-learn-more div img{
+    max-width: 10rem;
+    padding: 2px;
+    height: 10rem;
+}
+
+.inner-learn-more div{
+    border: 2px solid black;
+    display: flex;
+    min-width: 50rem;
+    width: 35%;
+    min-height: 10rem;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.inner-learn-more div p{
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.get-started{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.get-started h2{
+    text-align: center;
+}
+
+.get-started a{
+    border: 2px solid black;
+    padding: 1rem 2.5rem 1rem 2.5rem;
+    background-color:white;
+    color: black;
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+.get-started a:hover{
+    background-color: black;
+    color: white;
+}
+
+/*=================================
+  Footer content
+  =================================*/
+
+  .footer{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    padding: 1.5rem;
+    justify-content: space-evenly;
+    width: 100% !important;
+    padding: 3rem 2rem;
+  }
+
+  .footer .para-inside-footer{
+    text-align: center;
+  }
+
+  .para-inside-footer p{
+    font-size: 1.8rem;
+    color: white;
+  }
+
+  .links-inside-footer a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.7rem;
+    font-weight: bolder;
+  }
+
+  .links-inside-footer{
+    display: flex;
+    gap: clamp(2rem,15vw,20rem);
+    justify-content:center;
+  }
+
+
+/*=================================
+  Media Queries
+  =================================*/
+
+@media(max-width:35rem){
+    .nav-links{
+        display: none;
+    }
+
+    .hamburger{
+        display: inline-block;
+        font-size: 3rem;
+        padding-right: 1rem;
+        position: relative;
+    }
+}
+
+@media(max-width:58rem){
+    .college-container{
+        display: none;
+    }
+    
+    .hero-subContent h1,.hero-subContent p{
+        text-align: center;
+    }
+    
+    .hero-content .hero-links-container{
+        justify-content: center;
+        gap: 1rem;
+    }
+    
+    .hero-subContent{
+        width: 100%;
+    }
+    
+    .hero-content p{
+        font-size: 2rem;
+    }
+    
+    .hero-content h1{
+        font-size: 4rem;
+        font-weight: bolder;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    
+}
+
+@media(max-width:352px){
+    .hero-content{
+        width: 36.5rem;
+    }
+}
+
+@media(max-width:556px){
+    .hero-content{
+        padding: 1rem;
+    }
+}
+
+@media(max-width:1215px){
+    .hero-subContent{
+        padding: 1rem 1rem 2rem;
+    }
+}
+
+@media(max-width:1520px){
+    .hero-subContent img{
+        height: 30rem;
+    }
+}
+
+/* Sticky menu bug */
+
+@media(min-width:35rem){
+    .hidden-bar{
+        display: none !important;
+    }
+    
+    .hamburger{
+        display: none;
+    }
+}
+
+/*learn-more content*/
+
+@media(max-width:565px){
+    
+    
+    .inner-learn-more >div{
+        flex-direction: column;
+        min-width: 20rem;
+        width: 100%;
+    }
+    
+    .learn-more{
+        margin: 2px;
+        padding: 1rem;
+    }
+    
+    .learn-more> p{
+        width: 100%;
+        font-weight: normal;
+        letter-spacing: 1px;
+        line-height: 3rem;
+        font-size: 3rem;
+    }
+    
+    .learn-more>h1{
+        font-weight: bolder;
+    }
+}
+
+@media(max-width:1128px){
+    .learn-more > h1{
+        font-size: 3rem;
+        width: 100%;
+    }
+    
+    .learn-more .inner-learn-more p{
+        width: 100%;
+        font-weight: lighter;
+    }
+}
+
+@media(max-width:352px){
+    .learn-more{
+        width: 36rem !important;
+    }
+    .footer{
+        width: 36.5rem !important;
+    }
+}
+
+@media(max-width:356px){
+    .hidden-bar{
+        display: none !important;
+    }
+}
